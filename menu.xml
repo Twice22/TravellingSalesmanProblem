@@ -1,0 +1,35 @@
+<ui>
+  <menubar name="MenuPrincipal">
+    <menu action="FichierMenuAction">
+      <menuitem action="OuvrirAction" />
+      <menuitem action="EnregistrerAction" />
+      <menuitem action="QuitterAction" />
+    </menu>
+     <menu name="AlgorithmesMenu" action="AlgorithmesMenuAction">
+      <menuitem action="PlusProcheVoisinAction" />
+      <menuitem action="PlusProcheAdditionAction" />
+      <menuitem action="InsertionMoindreCoutAction" />
+      <menuitem action="InsertionPlusLointaineAction" />
+    </menu>
+    <menu name="AideMenu" action="AideMenuAction">
+      <menuitem action="AideAction" />
+      <menuitem action="AProposAction" />
+    </menu>
+  </menubar>
+
+  <toolbar name="BarreOutil" action="BarreOutilAction">
+    <placeholder name="ItemsAOutils">
+      <toolitem action="OuvrirAction" />
+      <toolitem action="EnregistrerAction" />
+      <toolitem action="QuitterAction" />
+      <separator />
+      <toolitem action="PlusProcheVoisinAction" />
+      <toolitem action="PlusProcheAdditionAction" />
+      <toolitem action="InsertionMoindreCoutAction" />
+      <toolitem action="InsertionPlusLointaineAction" />
+      <separator />
+      <toolitem action="AideAction" />
+      <toolitem action="AProposAction" />
+    </placeholder>
+  </toolbar>
+</ui>

@@ -1,0 +1,10 @@
+<map id="insertionPlusLointaine" name="insertionPlusLointaine">
+<area shape="rect" id="node3" href="$liste_8c.html#ad505979e28d4ef371a7ab454173904a3" title="Fonction de création d&#39;une liste doublement chaînées vide." alt="" coords="222,5,301,32"/>
+<area shape="rect" id="node5" href="$liste_8c.html#a7bfb47f75f506f8e14a9197fb9e38527" title="Fonction qui permet d&#39;ajouter un élément en tête de la liste." alt="" coords="210,56,313,83"/>
+<area shape="rect" id="node7" href="$liste_8c.html#a4b3afe272c49f8837696b91fe4ef9430" title="Fonction qui permet d&#39;ajouter un élément à la liste après l&#39;élément courant de ma liste." alt="" coords="369,81,463,108"/>
+<area shape="rect" id="node9" href="$liste_simple_8c.html#a13a91330fc7f0340260f8f0abef42446" title="Fonction qui suppprime un élément de la liste repéré par son numéro" alt="" coords="229,157,293,184"/>
+<area shape="rect" id="node11" href="$liste_8c.html#a5e834c7503a27775121af04b3a650251" title="Fonction qui permet d&#39;ajouter un élément en queue de la liste." alt="" coords="204,208,319,235"/>
+<area shape="rect" id="node15" href="$liste_simple_8c.html#a0d1e3428b4f8714eb5b1334f81308824" title="Fonction indiquant si la liste en paramètre est vide ou non." alt="" coords="214,259,309,285"/>
+<area shape="rect" id="node18" href="$liste_8c.html#a9fb617c8de692cfa42e628b2059420ed" title="Fonction qui modifie la distance séparant l&#39;élément courant de l&#39;élément suivant." alt="" coords="203,309,319,336"/>
+<area shape="rect" id="node13" href="$liste_8c.html#ae66a2504096ec97bf32c858ae84f6218" title="Fonction qui permet d&#39;ajouter un élément à la liste avant l&#39;élément courant de ma liste." alt="" coords="369,208,463,235"/>
+</map>

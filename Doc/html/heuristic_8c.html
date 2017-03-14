@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>Traveling Salesman Problem: R√©f√©rence du fichier heuristic.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traveling Salesman Problem
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Create heuristic to solve the TSP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- G√©n√©r√© par Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;donn√©es</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('heuristic_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de donn√©es</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">R√©f√©rence du fichier heuristic.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Heuristiques.  
+<a href="#details">Plus de d√©tails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &lt;limits.h&gt;</code><br/>
+<code>#include &quot;heuristic.h&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des d√©pendances par inclusion de heuristic.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="heuristic_8c__incl.png" border="0" usemap="#heuristic_8c" alt=""/></div>
+<map name="heuristic_8c" id="heuristic_8c">
+<area shape="rect" id="node11" href="heuristic_8h_source.html" title="heuristic.h" alt="" coords="103,80,186,107"/><area shape="rect" id="node13" href="graphe_8h_source.html" title="graphe.h" alt="" coords="115,155,187,181"/><area shape="rect" id="node25" href="liste_8h_source.html" title="liste.h" alt="" coords="277,155,334,181"/><area shape="rect" id="node16" href="liste_simple_8h_source.html" title="listeSimple.h" alt="" coords="228,229,324,256"/><area shape="rect" id="node22" href="constantes_8h.html" title="DÈfinition des constantes utiles." alt="" coords="106,229,203,256"/><area shape="rect" id="node18" href="booleen_8h_source.html" title="booleen.h" alt="" coords="229,304,307,331"/><area shape="rect" id="node20" href="point_8h_source.html" title="point.h" alt="" coords="332,304,394,331"/></map>
+</div>
+</div>
+<p><a href="heuristic_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a9d3b443c8f1080b0a002dcafcc771e71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe.html">Liste</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heuristic_8c.html#a9d3b443c8f1080b0a002dcafcc771e71">plusProcheVoisin</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe)</td></tr>
+<tr class="memdesc:a9d3b443c8f1080b0a002dcafcc771e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de parcours du graphe par l'heuristique du plus proche voisin.  <a href="#a9d3b443c8f1080b0a002dcafcc771e71">Plus de d√©tails...</a><br/></td></tr>
+<tr class="separator:a9d3b443c8f1080b0a002dcafcc771e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7662cfbee9a21eaefa5f40027f7f6b87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe.html">Liste</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heuristic_8c.html#a7662cfbee9a21eaefa5f40027f7f6b87">plusProcheAddition</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe)</td></tr>
+<tr class="memdesc:a7662cfbee9a21eaefa5f40027f7f6b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de parcours du graphe par l'heuristique de l'insertion la plus proche.  <a href="#a7662cfbee9a21eaefa5f40027f7f6b87">Plus de d√©tails...</a><br/></td></tr>
+<tr class="separator:a7662cfbee9a21eaefa5f40027f7f6b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816887ffb0bf2552b440c3da4c31ee0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe.html">Liste</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heuristic_8c.html#a816887ffb0bf2552b440c3da4c31ee0c">insertionMoindreCout</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe)</td></tr>
+<tr class="memdesc:a816887ffb0bf2552b440c3da4c31ee0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de parcours du graphe par l'heuristique de l'insertion la moins co˚teuse.  <a href="#a816887ffb0bf2552b440c3da4c31ee0c">Plus de d√©tails...</a><br/></td></tr>
+<tr class="separator:a816887ffb0bf2552b440c3da4c31ee0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcbf2e0e41156821f0ab6278b19e5df4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe.html">Liste</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heuristic_8c.html#afcbf2e0e41156821f0ab6278b19e5df4">insertionPlusLointaine</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe)</td></tr>
+<tr class="memdesc:afcbf2e0e41156821f0ab6278b19e5df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de parcours du graphe par l'heuristique de l'insertion la plus ÈloignÈe  <a href="#afcbf2e0e41156821f0ab6278b19e5df4">Plus de d√©tails...</a><br/></td></tr>
+<tr class="separator:afcbf2e0e41156821f0ab6278b19e5df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5bc93a159c4822434570ae396ac5c2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heuristic_8c.html#ae5bc93a159c4822434570ae396ac5c2c">deuxOpt</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe, <a class="el" href="structe.html">Liste</a> *listeSommets)</td></tr>
+<tr class="memdesc:ae5bc93a159c4822434570ae396ac5c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction d'amÈlioration du tour par l'algorithme 2-opt.  <a href="#ae5bc93a159c4822434570ae396ac5c2c">Plus de d√©tails...</a><br/></td></tr>
+<tr class="separator:ae5bc93a159c4822434570ae396ac5c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description d√©taill√©e</h2>
+<div class="textblock"><p>Heuristiques. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Victor.B </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>13 avril 2012</dd></dl>
+<p>Heuristiques pour le problËme du voyageur de commerce. </p>
+
+<p>D√©finition dans le fichier <a class="el" href="heuristic_8c_source.html">heuristic.c</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="ae5bc93a159c4822434570ae396ac5c2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deuxOpt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>listeSommets</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction d'amÈlioration du tour par l'algorithme 2-opt. </p>
+<dl class="params"><dt>Param√®tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> ‡ parcourir. Ne peut Ítre NULL. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">listeSommets</td><td>Liste du parcours ‡ modifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>D√©finition √† la ligne <a class="el" href="heuristic_8c_source.html#l00387">387</a> du fichier <a class="el" href="heuristic_8c_source.html">heuristic.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a816887ffb0bf2552b440c3da4c31ee0c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe.html">Liste</a> * insertionMoindreCout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de parcours du graphe par l'heuristique de l'insertion la moins co˚teuse. </p>
+<dl class="params"><dt>Param√®tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> ‡ parcourir par l'heurisitique. Ne peut Ítre NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Liste des sommets parcourus en appliquant l'heuristique de l'insertion la moins co˚teuse </dd></dl>
+
+<p>D√©finition √† la ligne <a class="el" href="heuristic_8c_source.html#l00175">175</a> du fichier <a class="el" href="heuristic_8c_source.html">heuristic.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="heuristic_8c_a816887ffb0bf2552b440c3da4c31ee0c_cgraph.png" border="0" usemap="#heuristic_8c_a816887ffb0bf2552b440c3da4c31ee0c_cgraph" alt=""/></div>
+<map name="heuristic_8c_a816887ffb0bf2552b440c3da4c31ee0c_cgraph" id="heuristic_8c_a816887ffb0bf2552b440c3da4c31ee0c_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#ad505979e28d4ef371a7ab454173904a3" title="Fonction de crÈation d&#39;une liste doublement chaÓnÈes vide." alt="" coords="219,5,298,32"/><area shape="rect" id="node5" href="liste_8c.html#a7bfb47f75f506f8e14a9197fb9e38527" title="Fonction qui permet d&#39;ajouter un ÈlÈment en tÍte de la liste." alt="" coords="207,56,310,83"/><area shape="rect" id="node7" href="liste_8c.html#a4b3afe272c49f8837696b91fe4ef9430" title="Fonction qui permet d&#39;ajouter un ÈlÈment ‡ la liste aprËs l&#39;ÈlÈment courant de ma liste." alt="" coords="366,81,461,108"/><area shape="rect" id="node9" href="liste_simple_8c.html#a13a91330fc7f0340260f8f0abef42446" title="Fonction qui suppprime un ÈlÈment de la liste repÈrÈ par son numÈro" alt="" coords="227,157,291,184"/><area shape="rect" id="node11" href="liste_8c.html#a5e834c7503a27775121af04b3a650251" title="Fonction qui permet d&#39;ajouter un ÈlÈment en queue de la liste." alt="" coords="201,208,316,235"/><area shape="rect" id="node15" href="liste_simple_8c.html#a0d1e3428b4f8714eb5b1334f81308824" title="Fonction indiquant si la liste en paramËtre est vide ou non." alt="" coords="211,259,306,285"/><area shape="rect" id="node18" href="liste_8c.html#a9fb617c8de692cfa42e628b2059420ed" title="Fonction qui modifie la distance sÈparant l&#39;ÈlÈment courant de l&#39;ÈlÈment suivant." alt="" coords="201,309,317,336"/><area shape="rect" id="node13" href="liste_8c.html#ae66a2504096ec97bf32c858ae84f6218" title="Fonction qui permet d&#39;ajouter un ÈlÈment ‡ la liste avant l&#39;ÈlÈment courant de ma liste." alt="" coords="366,208,461,235"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afcbf2e0e41156821f0ab6278b19e5df4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe.html">Liste</a> * insertionPlusLointaine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de parcours du graphe par l'heuristique de l'insertion la plus ÈloignÈe </p>
+<dl class="params"><dt>Param√®tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> ‡ parcourir par l'heurisitique. Ne peut Ítre NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Liste des sommets parcourus en appliquant l'heuristique de l'insertion la plus ÈloignÈe </dd></dl>
+
+<p>D√©finition √† la ligne <a class="el" href="heuristic_8c_source.html#l00271">271</a> du fichier <a class="el" href="heuristic_8c_source.html">heuristic.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="heuristic_8c_afcbf2e0e41156821f0ab6278b19e5df4_cgraph.png" border="0" usemap="#heuristic_8c_afcbf2e0e41156821f0ab6278b19e5df4_cgraph" alt=""/></div>
+<map name="heuristic_8c_afcbf2e0e41156821f0ab6278b19e5df4_cgraph" id="heuristic_8c_afcbf2e0e41156821f0ab6278b19e5df4_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#ad505979e28d4ef371a7ab454173904a3" title="Fonction de crÈation d&#39;une liste doublement chaÓnÈes vide." alt="" coords="222,5,301,32"/><area shape="rect" id="node5" href="liste_8c.html#a7bfb47f75f506f8e14a9197fb9e38527" title="Fonction qui permet d&#39;ajouter un ÈlÈment en tÍte de la liste." alt="" coords="210,56,313,83"/><area shape="rect" id="node7" href="liste_8c.html#a4b3afe272c49f8837696b91fe4ef9430" title="Fonction qui permet d&#39;ajouter un ÈlÈment ‡ la liste aprËs l&#39;ÈlÈment courant de ma liste." alt="" coords="369,81,463,108"/><area shape="rect" id="node9" href="liste_simple_8c.html#a13a91330fc7f0340260f8f0abef42446" title="Fonction qui suppprime un ÈlÈment de la liste repÈrÈ par son numÈro" alt="" coords="229,157,293,184"/><area shape="rect" id="node11" href="liste_8c.html#a5e834c7503a27775121af04b3a650251" title="Fonction qui permet d&#39;ajouter un ÈlÈment en queue de la liste." alt="" coords="204,208,319,235"/><area shape="rect" id="node15" href="liste_simple_8c.html#a0d1e3428b4f8714eb5b1334f81308824" title="Fonction indiquant si la liste en paramËtre est vide ou non." alt="" coords="214,259,309,285"/><area shape="rect" id="node18" href="liste_8c.html#a9fb617c8de692cfa42e628b2059420ed" title="Fonction qui modifie la distance sÈparant l&#39;ÈlÈment courant de l&#39;ÈlÈment suivant." alt="" coords="203,309,319,336"/><area shape="rect" id="node13" href="liste_8c.html#ae66a2504096ec97bf32c858ae84f6218" title="Fonction qui permet d&#39;ajouter un ÈlÈment ‡ la liste avant l&#39;ÈlÈment courant de ma liste." alt="" coords="369,208,463,235"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7662cfbee9a21eaefa5f40027f7f6b87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe.html">Liste</a> * plusProcheAddition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de parcours du graphe par l'heuristique de l'insertion la plus proche. </p>
+<dl class="params"><dt>Param√®tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> ‡ parcourir par l'heurisitique. Ne peut Ítre NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Liste des sommets parcourus en appliquant l'heuristique de l'insertion la plus proche </dd></dl>
+
+<p>D√©finition √† la ligne <a class="el" href="heuristic_8c_source.html#l00090">90</a> du fichier <a class="el" href="heuristic_8c_source.html">heuristic.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="heuristic_8c_a7662cfbee9a21eaefa5f40027f7f6b87_cgraph.png" border="0" usemap="#heuristic_8c_a7662cfbee9a21eaefa5f40027f7f6b87_cgraph" alt=""/></div>
+<map name="heuristic_8c_a7662cfbee9a21eaefa5f40027f7f6b87_cgraph" id="heuristic_8c_a7662cfbee9a21eaefa5f40027f7f6b87_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#ad505979e28d4ef371a7ab454173904a3" title="Fonction de crÈation d&#39;une liste doublement chaÓnÈes vide." alt="" coords="209,5,287,32"/><area shape="rect" id="node5" href="liste_8c.html#a7bfb47f75f506f8e14a9197fb9e38527" title="Fonction qui permet d&#39;ajouter un ÈlÈment en tÍte de la liste." alt="" coords="197,56,299,83"/><area shape="rect" id="node7" href="liste_8c.html#a4b3afe272c49f8837696b91fe4ef9430" title="Fonction qui permet d&#39;ajouter un ÈlÈment ‡ la liste aprËs l&#39;ÈlÈment courant de ma liste." alt="" coords="355,81,450,108"/><area shape="rect" id="node9" href="liste_simple_8c.html#a13a91330fc7f0340260f8f0abef42446" title="Fonction qui suppprime un ÈlÈment de la liste repÈrÈ par son numÈro" alt="" coords="216,157,280,184"/><area shape="rect" id="node11" href="liste_8c.html#a5e834c7503a27775121af04b3a650251" title="Fonction qui permet d&#39;ajouter un ÈlÈment en queue de la liste." alt="" coords="191,208,305,235"/><area shape="rect" id="node15" href="liste_8c.html#a5aff3b75ee56dd628a8ebd7217108166" title="Fonction qui affiche ‡ l&#39;Ècran tous les ÈlÈments de la liste." alt="" coords="207,259,289,285"/><area shape="rect" id="node17" href="liste_simple_8c.html#aa6a71f2ebebf0881b44ee3a694505f0d" title="Fonction qui affiche ‡ l&#39;Ècran les ÈlÈments de la liste." alt="" coords="198,309,298,336"/><area shape="rect" id="node19" href="liste_simple_8c.html#a0d1e3428b4f8714eb5b1334f81308824" title="Fonction indiquant si la liste en paramËtre est vide ou non." alt="" coords="201,360,295,387"/><area shape="rect" id="node22" href="liste_8c.html#a9fb617c8de692cfa42e628b2059420ed" title="Fonction qui modifie la distance sÈparant l&#39;ÈlÈment courant de l&#39;ÈlÈment suivant." alt="" coords="190,411,306,437"/><area shape="rect" id="node13" href="liste_8c.html#ae66a2504096ec97bf32c858ae84f6218" title="Fonction qui permet d&#39;ajouter un ÈlÈment ‡ la liste avant l&#39;ÈlÈment courant de ma liste." alt="" coords="355,208,450,235"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d3b443c8f1080b0a002dcafcc771e71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe.html">Liste</a> * plusProcheVoisin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de parcours du graphe par l'heuristique du plus proche voisin. </p>
+<dl class="params"><dt>Param√®tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> ‡ parcourir par l'heurisitique. Ne peut Ítre NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Liste des sommets parcourus en appliquant l'heuristique du plus proche voisin </dd></dl>
+
+<p>D√©finition √† la ligne <a class="el" href="heuristic_8c_source.html#l00027">27</a> du fichier <a class="el" href="heuristic_8c_source.html">heuristic.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="heuristic_8c_a9d3b443c8f1080b0a002dcafcc771e71_cgraph.png" border="0" usemap="#heuristic_8c_a9d3b443c8f1080b0a002dcafcc771e71_cgraph" alt=""/></div>
+<map name="heuristic_8c_a9d3b443c8f1080b0a002dcafcc771e71_cgraph" id="heuristic_8c_a9d3b443c8f1080b0a002dcafcc771e71_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#ad505979e28d4ef371a7ab454173904a3" title="Fonction de crÈation d&#39;une liste doublement chaÓnÈes vide." alt="" coords="194,5,273,32"/><area shape="rect" id="node5" href="liste_simple_8c.html#a0d1e3428b4f8714eb5b1334f81308824" title="Fonction indiquant si la liste en paramËtre est vide ou non." alt="" coords="186,56,281,83"/><area shape="rect" id="node7" href="liste_8c.html#a7bfb47f75f506f8e14a9197fb9e38527" title="Fonction qui permet d&#39;ajouter un ÈlÈment en tÍte de la liste." alt="" coords="182,107,285,133"/><area shape="rect" id="node11" href="liste_simple_8c.html#a13a91330fc7f0340260f8f0abef42446" title="Fonction qui suppprime un ÈlÈment de la liste repÈrÈ par son numÈro" alt="" coords="201,157,265,184"/><area shape="rect" id="node13" href="liste_8c.html#a5e834c7503a27775121af04b3a650251" title="Fonction qui permet d&#39;ajouter un ÈlÈment en queue de la liste." alt="" coords="176,208,291,235"/><area shape="rect" id="node9" href="liste_8c.html#a4b3afe272c49f8837696b91fe4ef9430" title="Fonction qui permet d&#39;ajouter un ÈlÈment ‡ la liste aprËs l&#39;ÈlÈment courant de ma liste." alt="" coords="339,107,434,133"/><area shape="rect" id="node15" href="liste_8c.html#ae66a2504096ec97bf32c858ae84f6218" title="Fonction qui permet d&#39;ajouter un ÈlÈment ‡ la liste avant l&#39;ÈlÈment courant de ma liste." alt="" coords="339,208,434,235"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="heuristic_8c.html">heuristic.c</a></li>
+    <li class="footer">G√©n√©r√© le Dimanche Avril 28 2013 12:47:56 pour Traveling Salesman Problem par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

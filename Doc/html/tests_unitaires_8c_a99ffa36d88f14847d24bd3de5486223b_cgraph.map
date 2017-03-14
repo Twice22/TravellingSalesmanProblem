@@ -1,0 +1,13 @@
+<map id="testsListeDouble" name="testsListeDouble">
+<area shape="rect" id="node3" href="$vider_le_cache_8c.html#a663cb84f6cc1f69cd5b17d6b5b823777" title="Fonction qui vide le Buffer pour éviter des erreurs aux niveaux des saisies." alt="" coords="193,5,281,32"/>
+<area shape="rect" id="node5" href="$liste_8c.html#ad505979e28d4ef371a7ab454173904a3" title="Fonction de création d&#39;une liste doublement chaînées vide." alt="" coords="198,56,277,83"/>
+<area shape="rect" id="node7" href="$liste_8c.html#adfce121c9b83d6ded9e01279fe78722e" title="Fonction de suppression d&#39;une liste doublement chaînée." alt="" coords="184,107,291,133"/>
+<area shape="rect" id="node11" href="$liste_8c.html#a7bfb47f75f506f8e14a9197fb9e38527" title="Fonction qui permet d&#39;ajouter un élément en tête de la liste." alt="" coords="186,157,289,184"/>
+<area shape="rect" id="node15" href="$liste_8c.html#a5aff3b75ee56dd628a8ebd7217108166" title="Fonction qui affiche à l&#39;écran tous les éléments de la liste." alt="" coords="196,208,279,235"/>
+<area shape="rect" id="node17" href="$liste_8c.html#a5e834c7503a27775121af04b3a650251" title="Fonction qui permet d&#39;ajouter un élément en queue de la liste." alt="" coords="180,259,295,285"/>
+<area shape="rect" id="node21" href="$liste_8c.html#a6602d7f0e19c0e59177ed00743efd571" title="Fonction qui permet de supprimer l&#39;élément courant de la liste." alt="" coords="174,309,301,336"/>
+<area shape="rect" id="node23" href="$liste_8c.html#a9fb617c8de692cfa42e628b2059420ed" title="Fonction qui modifie la distance séparant l&#39;élément courant de l&#39;élément suivant." alt="" coords="179,360,295,387"/>
+<area shape="rect" id="node9" href="$liste_8c.html#ab88c0128206fec328a604cce14d7e08b" title="Fonction de vidage d&#39;une liste doublement chaînées." alt="" coords="358,107,437,133"/>
+<area shape="rect" id="node13" href="$liste_8c.html#a4b3afe272c49f8837696b91fe4ef9430" title="Fonction qui permet d&#39;ajouter un élément à la liste après l&#39;élément courant de ma liste." alt="" coords="350,157,445,184"/>
+<area shape="rect" id="node19" href="$liste_8c.html#ae66a2504096ec97bf32c858ae84f6218" title="Fonction qui permet d&#39;ajouter un élément à la liste avant l&#39;élément courant de ma liste." alt="" coords="350,259,445,285"/>
+</map>

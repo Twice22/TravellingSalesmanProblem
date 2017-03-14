@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>Traveling Salesman Problem: RÃ©fÃ©rence du fichier liste.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traveling Salesman Problem
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Create heuristic to solve the TSP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;donnÃ©es</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('liste_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de donnÃ©es</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">RÃ©fÃ©rence du fichier liste.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Liste doublement chaînées.  
+<a href="#details">Plus de dÃ©tails...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &quot;liste.h&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dÃ©pendances par inclusion de liste.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="liste_8c__incl.png" border="0" usemap="#liste_8c" alt=""/></div>
+<map name="liste_8c" id="liste_8c">
+<area shape="rect" id="node9" href="liste_8h_source.html" title="liste.h" alt="" coords="270,80,327,107"/><area shape="rect" id="node11" href="point_8h_source.html" title="point.h" alt="" coords="268,155,329,181"/></map>
+</div>
+</div>
+<p><a href="liste_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ad505979e28d4ef371a7ab454173904a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe.html">Liste</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#ad505979e28d4ef371a7ab454173904a3">creerListe</a> (void)</td></tr>
+<tr class="memdesc:ad505979e28d4ef371a7ab454173904a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'une liste doublement chaînées vide.  <a href="#ad505979e28d4ef371a7ab454173904a3">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:ad505979e28d4ef371a7ab454173904a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab88c0128206fec328a604cce14d7e08b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#ab88c0128206fec328a604cce14d7e08b">viderListe</a> (<a class="el" href="structe.html">Liste</a> *liste)</td></tr>
+<tr class="memdesc:ab88c0128206fec328a604cce14d7e08b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de vidage d'une liste doublement chaînées.  <a href="#ab88c0128206fec328a604cce14d7e08b">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:ab88c0128206fec328a604cce14d7e08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfce121c9b83d6ded9e01279fe78722e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#adfce121c9b83d6ded9e01279fe78722e">supprimerListe</a> (<a class="el" href="structe.html">Liste</a> **maListe)</td></tr>
+<tr class="memdesc:adfce121c9b83d6ded9e01279fe78722e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de suppression d'une liste doublement chaînée.  <a href="#adfce121c9b83d6ded9e01279fe78722e">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:adfce121c9b83d6ded9e01279fe78722e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66a2504096ec97bf32c858ae84f6218"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#ae66a2504096ec97bf32c858ae84f6218">ajouterAvant</a> (<a class="el" href="structe.html">Liste</a> *monElement, int numeroSommet, <a class="el" href="struct_coord.html">Coord</a> monPoint, float cout)</td></tr>
+<tr class="memdesc:ae66a2504096ec97bf32c858ae84f6218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'ajouter un élément à la liste avant l'élément courant de ma liste.  <a href="#ae66a2504096ec97bf32c858ae84f6218">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:ae66a2504096ec97bf32c858ae84f6218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3afe272c49f8837696b91fe4ef9430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#a4b3afe272c49f8837696b91fe4ef9430">ajouterApres</a> (<a class="el" href="structe.html">Liste</a> *monElement, int numeroSommet, <a class="el" href="struct_coord.html">Coord</a> monPoint, float cout)</td></tr>
+<tr class="memdesc:a4b3afe272c49f8837696b91fe4ef9430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'ajouter un élément à la liste après l'élément courant de ma liste.  <a href="#a4b3afe272c49f8837696b91fe4ef9430">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a4b3afe272c49f8837696b91fe4ef9430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfb47f75f506f8e14a9197fb9e38527"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#a7bfb47f75f506f8e14a9197fb9e38527">ajouterEnTete</a> (<a class="el" href="structe.html">Liste</a> *racine, int numeroSommet, <a class="el" href="struct_coord.html">Coord</a> monPoint, float cout)</td></tr>
+<tr class="memdesc:a7bfb47f75f506f8e14a9197fb9e38527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'ajouter un élément en tête de la liste.  <a href="#a7bfb47f75f506f8e14a9197fb9e38527">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a7bfb47f75f506f8e14a9197fb9e38527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e834c7503a27775121af04b3a650251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#a5e834c7503a27775121af04b3a650251">ajouterEnQueue</a> (<a class="el" href="structe.html">Liste</a> *racine, int numeroSommet, <a class="el" href="struct_coord.html">Coord</a> monPoint, float cout)</td></tr>
+<tr class="memdesc:a5e834c7503a27775121af04b3a650251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'ajouter un élément en queue de la liste.  <a href="#a5e834c7503a27775121af04b3a650251">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a5e834c7503a27775121af04b3a650251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6602d7f0e19c0e59177ed00743efd571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#a6602d7f0e19c0e59177ed00743efd571">supprimerElement</a> (<a class="el" href="structe.html">Liste</a> *elementASupprimer)</td></tr>
+<tr class="memdesc:a6602d7f0e19c0e59177ed00743efd571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet de supprimer l'élément courant de la liste.  <a href="#a6602d7f0e19c0e59177ed00743efd571">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a6602d7f0e19c0e59177ed00743efd571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a0fe350ab7fc439cc04a2722e998d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe.html">Liste</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#a11a0fe350ab7fc439cc04a2722e998d4">getElement</a> (<a class="el" href="structe.html">Liste</a> *liste, int numeroSommet)</td></tr>
+<tr class="memdesc:a11a0fe350ab7fc439cc04a2722e998d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui recherche l'élément numero i de la liste.  <a href="#a11a0fe350ab7fc439cc04a2722e998d4">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a11a0fe350ab7fc439cc04a2722e998d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aff3b75ee56dd628a8ebd7217108166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#a5aff3b75ee56dd628a8ebd7217108166">ecrireListe</a> (<a class="el" href="structe.html">Liste</a> *liste)</td></tr>
+<tr class="memdesc:a5aff3b75ee56dd628a8ebd7217108166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui affiche à l'écran tous les éléments de la liste.  <a href="#a5aff3b75ee56dd628a8ebd7217108166">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a5aff3b75ee56dd628a8ebd7217108166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb617c8de692cfa42e628b2059420ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="liste_8c.html#a9fb617c8de692cfa42e628b2059420ed">modifierElement</a> (<a class="el" href="structe.html">Liste</a> *liste, float cout)</td></tr>
+<tr class="memdesc:a9fb617c8de692cfa42e628b2059420ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui modifie la distance séparant l'élément courant de l'élément suivant.  <a href="#a9fb617c8de692cfa42e628b2059420ed">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a9fb617c8de692cfa42e628b2059420ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91acf31ae3568a5bc3d85f7741b3f6d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91acf31ae3568a5bc3d85f7741b3f6d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>modifierEltNom</b> (<a class="el" href="structe.html">Liste</a> *liste, float cout, int numero)</td></tr>
+<tr class="separator:a91acf31ae3568a5bc3d85f7741b3f6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description dÃ©taillÃ©e</h2>
+<div class="textblock"><p>Liste doublement chaînées. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Victor.B </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>13 avril 2012</dd></dl>
+<p>Liste doublement chaînées pour le stockage des sommets du graphe par les différentes heurisitiques utilisées. </p>
+
+<p>DÃ©finition dans le fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a4b3afe272c49f8837696b91fe4ef9430"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ajouterApres </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>monElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numeroSommet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_coord.html">Coord</a>&#160;</td>
+          <td class="paramname"><em>monPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet d'ajouter un élément à la liste après l'élément courant de ma liste. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">monElement</td><td>Elément courant de la liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numeroSommet</td><td>Numero du nouvel élément à ajouter à la liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">monPoint</td><td>Coordonnées du nouvel élément à ajouter à la liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cout</td><td>Distance à parcourir entre l'élément courant de la lite et le nouvel élément à ajouter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00117">117</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae66a2504096ec97bf32c858ae84f6218"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ajouterAvant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>monElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numeroSommet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_coord.html">Coord</a>&#160;</td>
+          <td class="paramname"><em>monPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet d'ajouter un élément à la liste avant l'élément courant de ma liste. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">monElement</td><td>Elément courant de la liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numeroSommet</td><td>Numero du nouvel élément à ajouter à la liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">monPoint</td><td>Coordonnées du nouvel élément à ajouter à la liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cout</td><td>Distance à parcourir entre le nouvel élément à ajouter et l'élement courant de la liste. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00086">86</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e834c7503a27775121af04b3a650251"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ajouterEnQueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>racine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numeroSommet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_coord.html">Coord</a>&#160;</td>
+          <td class="paramname"><em>monPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet d'ajouter un élément en queue de la liste. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">racine</td><td>Premier élément de la liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numeroSommet</td><td>numero du nouvel élément à ajouter en queue de liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">monPoint</td><td>Coordonnées du nouvel élément à ajouter en queue de liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cout</td><td>Distance à parcourir entre l'élément à ajouter et l'élément courant de la liste. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00161">161</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="liste_8c_a5e834c7503a27775121af04b3a650251_cgraph.png" border="0" usemap="#liste_8c_a5e834c7503a27775121af04b3a650251_cgraph" alt=""/></div>
+<map name="liste_8c_a5e834c7503a27775121af04b3a650251_cgraph" id="liste_8c_a5e834c7503a27775121af04b3a650251_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#ae66a2504096ec97bf32c858ae84f6218" title="Fonction qui permet d&#39;ajouter un élément à la liste avant l&#39;élément courant de ma liste." alt="" coords="169,5,263,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7bfb47f75f506f8e14a9197fb9e38527"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ajouterEnTete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>racine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numeroSommet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_coord.html">Coord</a>&#160;</td>
+          <td class="paramname"><em>monPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet d'ajouter un élément en tête de la liste. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">racine</td><td>Premier élément de la liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numeroSommet</td><td>numero du nouvel élément à ajouter en tête de liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">monPoint</td><td>Coordonnées du nouvel élément à ajouter en tête de liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cout</td><td>Distance à parcourir entre l'élément à ajouter et l'élément courant de la liste. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00147">147</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="liste_8c_a7bfb47f75f506f8e14a9197fb9e38527_cgraph.png" border="0" usemap="#liste_8c_a7bfb47f75f506f8e14a9197fb9e38527_cgraph" alt=""/></div>
+<map name="liste_8c_a7bfb47f75f506f8e14a9197fb9e38527_cgraph" id="liste_8c_a7bfb47f75f506f8e14a9197fb9e38527_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#a4b3afe272c49f8837696b91fe4ef9430" title="Fonction qui permet d&#39;ajouter un élément à la liste après l&#39;élément courant de ma liste." alt="" coords="158,5,253,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad505979e28d4ef371a7ab454173904a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe.html">Liste</a> * creerListe </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création d'une liste doublement chaînées vide. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Liste doublement chaînées vide. </dd></dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00031">31</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5aff3b75ee56dd628a8ebd7217108166"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ecrireListe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>liste</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui affiche à l'écran tous les éléments de la liste. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">liste</td><td>Liste des éléments à afficher à l'écran. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00206">206</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11a0fe350ab7fc439cc04a2722e998d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe.html">Liste</a> * getElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>liste</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numeroSommet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui recherche l'élément numero i de la liste. </p>
+<p>et qui le retourne s'il a été trouvé.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">numeroSommet</td><td>Numero de l'élément recherché dans la liste. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">liste</td><td>Liste dans laquelle chercher l'élément. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne l'élément recherché par son numero. NULL si pas d'élément. </dd></dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00191">191</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9fb617c8de692cfa42e628b2059420ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void modifierElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>liste</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui modifie la distance séparant l'élément courant de l'élément suivant. </p>
+<p>de la liste de l'élement suivant.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">liste</td><td>Element de la liste dont la distance doit être modifiée. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cout</td><td>Nouvelle valeur de la distance séparant l'élément courant de l'élement suivant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00227">227</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6602d7f0e19c0e59177ed00743efd571"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void supprimerElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>elementASupprimer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet de supprimer l'élément courant de la liste. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">elementASupprimer</td><td>Element devant être supprimer de la liste. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00172">172</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adfce121c9b83d6ded9e01279fe78722e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void supprimerListe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> **&#160;</td>
+          <td class="paramname"><em>maListe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de suppression d'une liste doublement chaînée. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">maListe</td><td>Liste doublement chaînée à supprimer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00066">66</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="liste_8c_adfce121c9b83d6ded9e01279fe78722e_cgraph.png" border="0" usemap="#liste_8c_adfce121c9b83d6ded9e01279fe78722e_cgraph" alt=""/></div>
+<map name="liste_8c_adfce121c9b83d6ded9e01279fe78722e_cgraph" id="liste_8c_adfce121c9b83d6ded9e01279fe78722e_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#ab88c0128206fec328a604cce14d7e08b" title="Fonction de vidage d&#39;une liste doublement chaînées." alt="" coords="161,5,239,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab88c0128206fec328a604cce14d7e08b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void viderListe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe.html">Liste</a> *&#160;</td>
+          <td class="paramname"><em>liste</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de vidage d'une liste doublement chaînées. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">liste</td><td>Liste doublement chaînée à vider. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="liste_8c_source.html#l00049">49</a> du fichier <a class="el" href="liste_8c_source.html">liste.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="liste_8c.html">liste.c</a></li>
+    <li class="footer">GÃ©nÃ©rÃ© le Dimanche Avril 28 2013 12:47:56 pour Traveling Salesman Problem par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

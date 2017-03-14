@@ -1,0 +1,800 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>Traveling Salesman Problem: RÃ©fÃ©rence du fichier graphe.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traveling Salesman Problem
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Create heuristic to solve the TSP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;donnÃ©es</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('graphe_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de donnÃ©es</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">RÃ©fÃ©rence du fichier graphe.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Structure de graphe.  
+<a href="#details">Plus de dÃ©tails...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &lt;ctype.h&gt;</code><br/>
+<code>#include &lt;math.h&gt;</code><br/>
+<code>#include &lt;errno.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &quot;graphe.h&quot;</code><br/>
+<code>#include &quot;viderLeCache.h&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dÃ©pendances par inclusion de graphe.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c__incl.png" border="0" usemap="#graphe_8c" alt=""/></div>
+<map name="graphe_8c" id="graphe_8c">
+<area shape="rect" id="node15" href="graphe_8h_source.html" title="graphe.h" alt="" coords="529,80,601,107"/><area shape="rect" id="node29" href="vider_le_cache_8h_source.html" title="viderLeCache.h" alt="" coords="626,80,739,107"/><area shape="rect" id="node19" href="liste_simple_8h_source.html" title="listeSimple.h" alt="" coords="517,155,613,181"/><area shape="rect" id="node25" href="constantes_8h.html" title="Définition des constantes utiles." alt="" coords="638,155,735,181"/><area shape="rect" id="node21" href="booleen_8h_source.html" title="booleen.h" alt="" coords="449,229,527,256"/><area shape="rect" id="node23" href="point_8h_source.html" title="point.h" alt="" coords="552,229,613,256"/></map>
+</div>
+</div>
+<p><a href="graphe_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ad69b76fab892c29b0bdf00987d439eae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#ad69b76fab892c29b0bdf00987d439eae">creerGraphe</a> (int n)</td></tr>
+<tr class="memdesc:ad69b76fab892c29b0bdf00987d439eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'un graphe vide.  <a href="#ad69b76fab892c29b0bdf00987d439eae">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:ad69b76fab892c29b0bdf00987d439eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c14efd2cbd3695eb5c706dac5f0a1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a02c14efd2cbd3695eb5c706dac5f0a1b">desallouerGraphe</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe)</td></tr>
+<tr class="memdesc:a02c14efd2cbd3695eb5c706dac5f0a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui supprime un graphe.  <a href="#a02c14efd2cbd3695eb5c706dac5f0a1b">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a02c14efd2cbd3695eb5c706dac5f0a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21a2ae97c5826c0a560c3603f677aa9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a21a2ae97c5826c0a560c3603f677aa9d">ajouterUnSommet</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe, int numeroSom, int abscisse, int ordonnee)</td></tr>
+<tr class="memdesc:a21a2ae97c5826c0a560c3603f677aa9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui ajoute un sommet au graphe.  <a href="#a21a2ae97c5826c0a560c3603f677aa9d">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a21a2ae97c5826c0a560c3603f677aa9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34e55d3bd1b88fb32088779fbbebccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#ac34e55d3bd1b88fb32088779fbbebccb">ajouterUnArc</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe, int numeroSomD, int numeroSomA, float cout)</td></tr>
+<tr class="memdesc:ac34e55d3bd1b88fb32088779fbbebccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui relie un sommet à un autre du graphe.  <a href="#ac34e55d3bd1b88fb32088779fbbebccb">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:ac34e55d3bd1b88fb32088779fbbebccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a083093e34411fcc3a96105427aeb1efc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a083093e34411fcc3a96105427aeb1efc">lireBlancs</a> (FILE *fichier)</td></tr>
+<tr class="memdesc:a083093e34411fcc3a96105427aeb1efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui ignore les espaces et les S à la lecture d'un fichier.  <a href="#a083093e34411fcc3a96105427aeb1efc">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a083093e34411fcc3a96105427aeb1efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02902c57ebb0960fe57451c747c5cd1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a02902c57ebb0960fe57451c747c5cd1d">lireUnMot</a> (FILE *fichier)</td></tr>
+<tr class="memdesc:a02902c57ebb0960fe57451c747c5cd1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui lit un numero de sommet dans un fichier de type au format 'graphe'.  <a href="#a02902c57ebb0960fe57451c747c5cd1d">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a02902c57ebb0960fe57451c747c5cd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05fde15bd8473f729ad5e0983401d595"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a05fde15bd8473f729ad5e0983401d595">lireUneCoord</a> (FILE *fichier, int *abscisse, int *ordonnee)</td></tr>
+<tr class="memdesc:a05fde15bd8473f729ad5e0983401d595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui lit les coordonnées d'un sommet dans un fichier tete au format 'graphe'.  <a href="#a05fde15bd8473f729ad5e0983401d595">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a05fde15bd8473f729ad5e0983401d595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a4fdbf360817a103c7c92bbd177b3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#af3a4fdbf360817a103c7c92bbd177b3c">lireGraphe</a> (FILE *fichier, int n)</td></tr>
+<tr class="memdesc:af3a4fdbf360817a103c7c92bbd177b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui fournit un pointeur sur un graphe construit à partir.  <a href="#af3a4fdbf360817a103c7c92bbd177b3c">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:af3a4fdbf360817a103c7c92bbd177b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8366b5118afd046462383df49bb2942f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a8366b5118afd046462383df49bb2942f">ecrireGraphe</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe)</td></tr>
+<tr class="memdesc:a8366b5118afd046462383df49bb2942f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui affiche sur la console les éléments du graphe.  <a href="#a8366b5118afd046462383df49bb2942f">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a8366b5118afd046462383df49bb2942f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4cd6037f11aa48ee693564c2f8da466"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#ae4cd6037f11aa48ee693564c2f8da466">distance</a> (<a class="el" href="struct_coord.html">Coord</a> pt1, <a class="el" href="struct_coord.html">Coord</a> pt2)</td></tr>
+<tr class="memdesc:ae4cd6037f11aa48ee693564c2f8da466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui retourne la distance entre 2 points.  <a href="#ae4cd6037f11aa48ee693564c2f8da466">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:ae4cd6037f11aa48ee693564c2f8da466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc4d785ee3e4ce53bdca0bdfa2b77eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a5dc4d785ee3e4ce53bdca0bdfa2b77eb">pointOuDisque</a> (int largeur, int hauteur, int nbPoints, int *rayon)</td></tr>
+<tr class="memdesc:a5dc4d785ee3e4ce53bdca0bdfa2b77eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui demande si on veut un affichage par points.  <a href="#a5dc4d785ee3e4ce53bdca0bdfa2b77eb">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a5dc4d785ee3e4ce53bdca0bdfa2b77eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47d09707e25aac14244003d096ae9173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a47d09707e25aac14244003d096ae9173">echange</a> (<a class="el" href="struct_coord.html">Coord</a> *a, <a class="el" href="struct_coord.html">Coord</a> *b)</td></tr>
+<tr class="memdesc:a47d09707e25aac14244003d096ae9173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui echange deux valeurs.  <a href="#a47d09707e25aac14244003d096ae9173">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a47d09707e25aac14244003d096ae9173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4ce0ba5657c74cc0e5236c85865755"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a9a4ce0ba5657c74cc0e5236c85865755">completerGraphe</a> (int largeur, int hauteur, int *rayon, <a class="el" href="struct_graphe.html">Graphe</a> *graphe)</td></tr>
+<tr class="memdesc:a9a4ce0ba5657c74cc0e5236c85865755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui tire aléatoirement des coordonnées du plan et qui les placent.  <a href="#a9a4ce0ba5657c74cc0e5236c85865755">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a9a4ce0ba5657c74cc0e5236c85865755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814f65e6f52ea7b996fd7f1056e34081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a814f65e6f52ea7b996fd7f1056e34081">sauvegarderGraphe</a> (<a class="el" href="struct_graphe.html">Graphe</a> *graphe)</td></tr>
+<tr class="memdesc:a814f65e6f52ea7b996fd7f1056e34081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sauvegarde des données d'un graphe dans un fichier texte.  <a href="#a814f65e6f52ea7b996fd7f1056e34081">Plus de dÃ©tails...</a><br/></td></tr>
+<tr class="separator:a814f65e6f52ea7b996fd7f1056e34081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4e1e0e72dd773439e333c84dd762a9c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e1e0e72dd773439e333c84dd762a9c3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>c</b></td></tr>
+<tr class="separator:a4e1e0e72dd773439e333c84dd762a9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description dÃ©taillÃ©e</h2>
+<div class="textblock"><p>Structure de graphe. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Victor.B </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>16 avril 2012</dd></dl>
+<p>Fonction de création et de manipulation de graphe. </p>
+
+<p>DÃ©finition dans le fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="ac34e55d3bd1b88fb32088779fbbebccb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ajouterUnArc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numeroSomD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numeroSomA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui relie un sommet à un autre du graphe. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> dans lequel relier les 2 sommets </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numeroSomS</td><td>Numero du sommet de départ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numeroSomA</td><td>Numero du sommet d'arrivée </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cout</td><td>Distance entre les deux sommets </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00152">152</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a21a2ae97c5826c0a560c3603f677aa9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ajouterUnSommet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numeroSom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>abscisse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ordonnee</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui ajoute un sommet au graphe. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> dans lequel ajouter le sommet </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numeroSom</td><td>Numero du sommet à ajouter au graphe </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">abscisse</td><td>Abscisse du sommet à ajouter au graphe </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ordonnee</td><td>Ordonnée du sommet à ajouter au graphe </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00124">124</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a21a2ae97c5826c0a560c3603f677aa9d_cgraph.png" border="0" usemap="#graphe_8c_a21a2ae97c5826c0a560c3603f677aa9d_cgraph" alt=""/></div>
+<map name="graphe_8c_a21a2ae97c5826c0a560c3603f677aa9d_cgraph" id="graphe_8c_a21a2ae97c5826c0a560c3603f677aa9d_cgraph">
+<area shape="rect" id="node3" href="liste_simple_8c.html#aedc7bf32a9089e93ab1382c7faff79c6" title="Fonction qui insére un nouvel élément dans la liste." alt="" coords="181,5,245,32"/><area shape="rect" id="node5" href="liste_simple_8c.html#a0d1e3428b4f8714eb5b1334f81308824" title="Fonction indiquant si la liste en paramètre est vide ou non." alt="" coords="294,5,389,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a4ce0ba5657c74cc0e5236c85865755"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_graphe.html">Graphe</a> * completerGraphe </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>largeur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hauteur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rayon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui tire aléatoirement des coordonnées du plan et qui les placent. </p>
+<p>dans la liste simplement chaînée des sommets du graphe. Les points ainsi créés dans le plan ne se recouvrent pas. graphe doit être non NULL.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">largeur</td><td>Largeur de la fenêtre où sont contenus les sommets </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hauteur</td><td>Hauteur de la fenêtre où sont contenus les sommets </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rayon</td><td>Rayon adequate des disques représentant les sommets </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> qui doit contenir la liste créée. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur sur <a class="el" href="struct_graphe.html">Graphe</a>. </dd></dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00427">427</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a9a4ce0ba5657c74cc0e5236c85865755_cgraph.png" border="0" usemap="#graphe_8c_a9a4ce0ba5657c74cc0e5236c85865755_cgraph" alt=""/></div>
+<map name="graphe_8c_a9a4ce0ba5657c74cc0e5236c85865755_cgraph" id="graphe_8c_a9a4ce0ba5657c74cc0e5236c85865755_cgraph">
+<area shape="rect" id="node3" href="graphe_8c.html#ad69b76fab892c29b0bdf00987d439eae" title="Fonction de création d&#39;un graphe vide." alt="" coords="184,5,277,32"/><area shape="rect" id="node7" href="graphe_8c.html#a5dc4d785ee3e4ce53bdca0bdfa2b77eb" title="Fonction qui demande si on veut un affichage par points." alt="" coords="177,56,285,83"/><area shape="rect" id="node11" href="graphe_8c.html#a47d09707e25aac14244003d096ae9173" title="Fonction qui echange deux valeurs." alt="" coords="195,107,266,133"/><area shape="rect" id="node13" href="liste_simple_8c.html#aedc7bf32a9089e93ab1382c7faff79c6" title="Fonction qui insére un nouvel élément dans la liste." alt="" coords="199,157,263,184"/><area shape="rect" id="node17" href="graphe_8c.html#ae4cd6037f11aa48ee693564c2f8da466" title="Fonction qui retourne la distance entre 2 points." alt="" coords="195,208,266,235"/><area shape="rect" id="node5" href="liste_simple_8c.html#adf1e86cff5499b16607a9e94f13fb637" title="Fonction qui créé une liste simplement chaînée vide." alt="" coords="333,5,432,32"/><area shape="rect" id="node9" href="vider_le_cache_8c.html#a663cb84f6cc1f69cd5b17d6b5b823777" title="Fonction qui vide le Buffer pour éviter des erreurs aux niveaux des saisies." alt="" coords="339,56,427,83"/><area shape="rect" id="node15" href="liste_simple_8c.html#a0d1e3428b4f8714eb5b1334f81308824" title="Fonction indiquant si la liste en paramètre est vide ou non." alt="" coords="335,157,430,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad69b76fab892c29b0bdf00987d439eae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_graphe.html">Graphe</a> * creerGraphe </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création d'un graphe vide. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Nombre de sommets du graphe. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="struct_graphe.html">Graphe</a> vide avec n sommets. </dd></dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00032">32</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_ad69b76fab892c29b0bdf00987d439eae_cgraph.png" border="0" usemap="#graphe_8c_ad69b76fab892c29b0bdf00987d439eae_cgraph" alt=""/></div>
+<map name="graphe_8c_ad69b76fab892c29b0bdf00987d439eae_cgraph" id="graphe_8c_ad69b76fab892c29b0bdf00987d439eae_cgraph">
+<area shape="rect" id="node3" href="liste_simple_8c.html#adf1e86cff5499b16607a9e94f13fb637" title="Fonction qui créé une liste simplement chaînée vide." alt="" coords="147,5,245,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a02c14efd2cbd3695eb5c706dac5f0a1b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desallouerGraphe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui supprime un graphe. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> à supprimer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00084">84</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a02c14efd2cbd3695eb5c706dac5f0a1b_cgraph.png" border="0" usemap="#graphe_8c_a02c14efd2cbd3695eb5c706dac5f0a1b_cgraph" alt=""/></div>
+<map name="graphe_8c_a02c14efd2cbd3695eb5c706dac5f0a1b_cgraph" id="graphe_8c_a02c14efd2cbd3695eb5c706dac5f0a1b_cgraph">
+<area shape="rect" id="node3" href="liste_simple_8c.html#aa782be2f197aa634db43799bf66dcd11" title="Fonction qui vide une liste." alt="" coords="177,5,295,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4cd6037f11aa48ee693564c2f8da466"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float distance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_coord.html">Coord</a>&#160;</td>
+          <td class="paramname"><em>pt1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_coord.html">Coord</a>&#160;</td>
+          <td class="paramname"><em>pt2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui retourne la distance entre 2 points. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pt1</td><td>coordonnées du premier point. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pt2</td><td>coordonnées du deuxième point. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un flottant représentant la distance entre les deux points. </dd></dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00344">344</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a47d09707e25aac14244003d096ae9173"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void echange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_coord.html">Coord</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_coord.html">Coord</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui echange deux valeurs. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>Coordonnée du point A </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>Coordonnée du point B </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00407">407</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8366b5118afd046462383df49bb2942f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ecrireGraphe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui affiche sur la console les éléments du graphe. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphe</td><td>Le graphe dont ont veut afficher les éléments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00309">309</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a083093e34411fcc3a96105427aeb1efc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lireBlancs </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fichier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui ignore les espaces et les S à la lecture d'un fichier. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fichier</td><td>Fichier texte que doit lire la fonction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00186">186</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af3a4fdbf360817a103c7c92bbd177b3c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_graphe.html">Graphe</a> * lireGraphe </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fichier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui fournit un pointeur sur un graphe construit à partir. </p>
+<p>d'un fichier texte au format 'graphe'. graphe doit être non NULL.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fichier</td><td>Fichier texte au format 'graphe' que doit lire la fonction </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>(Nombre de sommets)+1 que contient le fichier texte. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur sur le graphe créé. </dd></dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00252">252</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_af3a4fdbf360817a103c7c92bbd177b3c_cgraph.png" border="0" usemap="#graphe_8c_af3a4fdbf360817a103c7c92bbd177b3c_cgraph" alt=""/></div>
+<map name="graphe_8c_af3a4fdbf360817a103c7c92bbd177b3c_cgraph" id="graphe_8c_af3a4fdbf360817a103c7c92bbd177b3c_cgraph">
+<area shape="rect" id="node3" href="graphe_8c.html#ad69b76fab892c29b0bdf00987d439eae" title="Fonction de création d&#39;un graphe vide." alt="" coords="153,5,247,32"/><area shape="rect" id="node7" href="graphe_8c.html#a02902c57ebb0960fe57451c747c5cd1d" title="Fonction qui lit un numero de sommet dans un fichier de type au format &#39;graphe&#39;." alt="" coords="161,56,239,83"/><area shape="rect" id="node9" href="graphe_8c.html#a083093e34411fcc3a96105427aeb1efc" title="Fonction qui ignore les espaces et les S à la lecture d&#39;un fichier." alt="" coords="322,81,401,108"/><area shape="rect" id="node11" href="graphe_8c.html#a05fde15bd8473f729ad5e0983401d595" title="Fonction qui lit les coordonnées d&#39;un sommet dans un fichier tete au format &#39;graphe&#39;." alt="" coords="151,157,249,184"/><area shape="rect" id="node13" href="graphe_8c.html#a21a2ae97c5826c0a560c3603f677aa9d" title="Fonction qui ajoute un sommet au graphe." alt="" coords="137,208,263,235"/><area shape="rect" id="node20" href="graphe_8c.html#ac34e55d3bd1b88fb32088779fbbebccb" title="Fonction qui relie un sommet à un autre du graphe." alt="" coords="151,259,249,285"/><area shape="rect" id="node5" href="liste_simple_8c.html#adf1e86cff5499b16607a9e94f13fb637" title="Fonction qui créé une liste simplement chaînée vide." alt="" coords="312,5,411,32"/><area shape="rect" id="node15" href="liste_simple_8c.html#aedc7bf32a9089e93ab1382c7faff79c6" title="Fonction qui insére un nouvel élément dans la liste." alt="" coords="329,208,393,235"/><area shape="rect" id="node17" href="liste_simple_8c.html#a0d1e3428b4f8714eb5b1334f81308824" title="Fonction indiquant si la liste en paramètre est vide ou non." alt="" coords="459,208,554,235"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a05fde15bd8473f729ad5e0983401d595"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lireUneCoord </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fichier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>abscisse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ordonnee</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui lit les coordonnées d'un sommet dans un fichier tete au format 'graphe'. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fichier</td><td>Fichier texte au format 'graphe' que doit lire la fonction </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">abscisse</td><td>Abscisse du sommet lu dans le fichier texte </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ordonnee</td><td>Ordonnée du sommet lu dans le fichier texte </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00230">230</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02902c57ebb0960fe57451c747c5cd1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lireUnMot </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fichier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui lit un numero de sommet dans un fichier de type au format 'graphe'. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fichier</td><td>Fichier texte au format 'graphe' que doit lire la fonction </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le numéro du sommet lu si pas d'erreur. (-1) sinon. </dd></dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00199">199</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a02902c57ebb0960fe57451c747c5cd1d_cgraph.png" border="0" usemap="#graphe_8c_a02902c57ebb0960fe57451c747c5cd1d_cgraph" alt=""/></div>
+<map name="graphe_8c_a02902c57ebb0960fe57451c747c5cd1d_cgraph" id="graphe_8c_a02902c57ebb0960fe57451c747c5cd1d_cgraph">
+<area shape="rect" id="node3" href="graphe_8c.html#a083093e34411fcc3a96105427aeb1efc" title="Fonction qui ignore les espaces et les S à la lecture d&#39;un fichier." alt="" coords="134,5,213,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5dc4d785ee3e4ce53bdca0bdfa2b77eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pointOuDisque </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>largeur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hauteur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rayon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui demande si on veut un affichage par points. </p>
+<p>ou par disques. Si on choisit par points alors un sommet est représenté par un pixel. Si on choisit par disque alors la fonction détermine un rayon adéquate aux vus des données.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">largeur</td><td>Largeur de la fenêtre où sont contenus les sommets </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hauteur</td><td>Hauteur de la fenêtre où sont contenus les sommets </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbPoints</td><td>Nombre de sommets dans le graphe. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rayon</td><td>Rayon adequate des disques représentant les sommets </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00362">362</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a5dc4d785ee3e4ce53bdca0bdfa2b77eb_cgraph.png" border="0" usemap="#graphe_8c_a5dc4d785ee3e4ce53bdca0bdfa2b77eb_cgraph" alt=""/></div>
+<map name="graphe_8c_a5dc4d785ee3e4ce53bdca0bdfa2b77eb_cgraph" id="graphe_8c_a5dc4d785ee3e4ce53bdca0bdfa2b77eb_cgraph">
+<area shape="rect" id="node3" href="vider_le_cache_8c.html#a663cb84f6cc1f69cd5b17d6b5b823777" title="Fonction qui vide le Buffer pour éviter des erreurs aux niveaux des saisies." alt="" coords="163,5,251,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a814f65e6f52ea7b996fd7f1056e34081"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sauvegarderGraphe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_graphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>graphe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sauvegarde des données d'un graphe dans un fichier texte. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphe</td><td><a class="el" href="struct_graphe.html">Graphe</a> à sauvegarder. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>DÃ©finition Ã  la ligne <a class="el" href="graphe_8c_source.html#l00541">541</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a814f65e6f52ea7b996fd7f1056e34081_cgraph.png" border="0" usemap="#graphe_8c_a814f65e6f52ea7b996fd7f1056e34081_cgraph" alt=""/></div>
+<map name="graphe_8c_a814f65e6f52ea7b996fd7f1056e34081_cgraph" id="graphe_8c_a814f65e6f52ea7b996fd7f1056e34081_cgraph">
+<area shape="rect" id="node3" href="vider_le_cache_8c.html#a663cb84f6cc1f69cd5b17d6b5b823777" title="Fonction qui vide le Buffer pour éviter des erreurs aux niveaux des saisies." alt="" coords="189,5,277,32"/><area shape="rect" id="node5" href="graphe_8c.html#ae4cd6037f11aa48ee693564c2f8da466" title="Fonction qui retourne la distance entre 2 points." alt="" coords="198,56,269,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="graphe_8c.html">graphe.c</a></li>
+    <li class="footer">GÃ©nÃ©rÃ© le Dimanche Avril 28 2013 12:47:56 pour Traveling Salesman Problem par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

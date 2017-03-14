@@ -1,0 +1,37 @@
+#######################################
+#		  <b>AIDE</b>		      #
+#######################################
+
+#######################################
+#				      #
+# - Sélectionnez un Algorithme parmi  #
+# les  quatre  disponibles  dans  le  #
+# menu ou la barre d'outils. 	      #
+#				      #
+# - Rentrez le nombre de sommets      #
+#   	       	      	 	      #
+# - Choisissez le type de réprésenta  #
+# tion des sommets : Point ou Disque  #
+#      	   	     	      	      #
+# - Appuyez sur Valider pour éxécuter #
+# le programme.		     	      #
+#				      #
+# - Vous  pouvez lire  la distance du #
+# parcours  dans  le  coin  inférieur #
+# gauche du programme.	    	      #
+#				      #
+#######################################
+
+#######################################
+# <b>Note</b> : Pour voir apparaitre le par  #
+# cours à l'écran vous devez redimens #
+# sioner la fenetre [BUG]	      #
+#######################################
+
+#######################################
+# <Info : Vous pouvez également sauve- #
+# garder  un graphe, ouvrir un graphe #
+# déjà  sauvegardé,  utiliser  l'algo #
+# 2-opt  pour  améliorer un  parcours #
+# déjà existant...	     	      #
+#######################################
